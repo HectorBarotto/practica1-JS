@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución 2</title>
+</head>
+<body>
+    <h2>Solución 2 -> Solicitud de datos personales</h2>
+<!--    <form id="myform"> -->
+    <label>Nombre y Apellido:
+        <input id="nombre" oninvalid="validarNombre(this);" 
+        name="nombre" oninput="validarNombre(this);"  type="text" 
+        maxlength="50" required="required" />
+    </label><br>
+
+    <select name="opCivil" id="opCivil" onchange="estadoCivil(this)">
+        <option value="no" selected>Estado Civil</option>
+        <option value="soltero">Soltero</option>
+        <option value="casado">Casado</option>
+        <option value="viudo">Viudo</option>
+        <option value="divorciado">Divorciado</option>
+    </select><br>
+
+    <label>Hijos(si/no)
+        <select name="opHijos" id="opHijos" onchange="tieneHijos(this)">
+            <option value="no">No</option>
+            <option value="si">Si</option>
+        </select>
+    </label>
+    <label id="cantHijos" hidden>Cantidad de hijos:
+        <input id="nHijos" type="number" Style="width:50px;" min="1" max="30">
+    </label><br>
+
+    <label class="addDatos" hidden>Nombre del cónyuge :
+        <input id="nombreEsposa" type="text" maxlength="50">
+    </label>
+    <label class="addDatos" hidden>Fecha de defunción del cónyuge :
+        <input id="fechaDef" type="date">
+    </label>
+    <label class="addDatos" hidden>fecha de divorcio :
+        <input id="fechaDiv" type="date">
+    </label>
+    <br>
+    <button class="button" onclick="aceptar()" style="margin:15px;"><b><i>Aceptar</i></b></button>
+    <button class="button" onclick="cancelar()" style="margin:15px;"><b><i>Cancelar</i></b></button>
+
+<!-- </form> -->
+
+    <script type="text/javascript" src="./code.js"></script>
+</body>
+</html>

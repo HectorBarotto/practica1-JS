@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución 3</title>
+</head>
+<body onload="crearTabla() , myOnLoad()">
+    <h2>Solución 3 -> Carga de estudiantes de una escuela primaria</h2>
+    <div style="margin-bottom: 20px ;">
+        <h3>Nuevo Estudiante:</h3>
+        <span>DNI:</span>
+        <input type="text" id="dni" style="width:80px;"/>
+        <span>NOMBRE:</span>
+        <input type="text" id="nombre" style="width:150px;"/>
+        <span>APELLIDO:</span>
+        <input type="text" id="apellido" style="width:150px;"/>
+        <br>
+        <select name="curso">
+            <option>Seleccione un Curso...</option>
+        </select>   
+        <select name="division">
+            <option>Seleccione una División...</option>
+        </select>
+
+        <button type="button" onclick="agregarAlumno()" style="margin:15px 0 0 30px;"><b><i>Agregar</i></b></button>
+    </div>
+    <div style="margin-bottom: 20px ;">
+        <span>DNI:</span>
+        <input type="text" id="dniBuscar" style="width:80px;"/>
+        <button type="button" onclick="validarDni()" style="margin-left:50px;"><b><i>Buscar</i></b></button>
+    </div>
+    <script type="text/javascript" src="./code.js"></script>
+</body>
+</html>
